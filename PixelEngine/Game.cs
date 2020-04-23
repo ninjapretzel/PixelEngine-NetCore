@@ -1,11 +1,7 @@
+﻿using OpenToolkit.Windowing.Desktop;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using OpenTK;
-using OpenTK.Graphics;
 
 namespace PixelEngine {
-	
 	public class Game {
 		public bool init { get; private set; }
 
@@ -16,7 +12,7 @@ namespace PixelEngine {
 
 		public int FrameRate { get; private set; }
 		public float FrameTime { get; private set; }
-		
+
 
 		internal GameWindow window;
 		internal int windowWidth;
@@ -31,7 +27,7 @@ namespace PixelEngine {
 
 		public Game() {
 			init = false;
-			
+
 		}
 
 		public void Construct(int width = 100, int height = 100, int pixWidth = 5, int pixHeight = 5, int frameRate = 60) {
@@ -48,18 +44,19 @@ namespace PixelEngine {
 				FrameRate = frameRate;
 				FrameTime = 1000.0f / FrameRate;
 			}
-			
-			
+
+
 		}
 
 		public void Start() {
+			window = new GameWindow(GameWindowSettings.Default, NativeWindowSettings.Default);
 
-			window = new GameWindow(windowWidth, windowHeight, GraphicsMode.Default, "PixelEngine NetCore Vidya Gaem");
+
 			active = true;
 
 			// gameLoop = new Thread(GameLoop);
 			// gameLoop.Start();
 		}
-		
+
 	}
 }

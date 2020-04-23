@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenTK" Version="3.2.0" />
+    <PackageReference Include="OpenTK" Version="4.0.0-pre9" />
   </ItemGroup>
 
 </Project>
